@@ -59,14 +59,16 @@ int partition(int *array, int lo, int hi, size_t size)
 		 * i is the lagging pointer to keep track of element
 		 * bigger than the pivot that might need to be swapped
 		 */
-		if (array[j] <= pivot)
+		if (array[j] < pivot)
 		{
 			i++;
 
-			swap(&array[i], &array[j]);
+			if (j != i && j != hi - 1)
+			{
+				swap(&array[i], &array[j]);
 
-			if (j > i )
 				print_array(array, size);
+			}
 
 		}
 	}
