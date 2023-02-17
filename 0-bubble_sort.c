@@ -29,3 +29,15 @@ void bubble_sort(int *array, size_t size)
 			t = 0;
 	}
 }
+
+/**
+ * swap - swap two integers
+ * @a: first int
+ * @b: second int
+ */
+void swap(int *a, int *b)
+{
+	int temp = *a;
+	*a = *b;
+	*b = temp;
+}
