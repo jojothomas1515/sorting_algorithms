@@ -31,7 +31,7 @@ void qs(int *array, int lo, int hi, int size)
 	qs(array, lo, p - 1, size);
 	qs(array, p + 1, hi, size);
 
-end_:
+		end_:
 	(void) NULL;
 }
 
@@ -62,8 +62,12 @@ int partition(int *array, int lo, int hi, size_t size)
 		if (array[j] <= pivot)
 		{
 			i++;
+
 			swap(&array[j], &array[i]);
-			print_array(array, size);
+
+			if (j > i && j < hi - 1)
+				print_array(array, size);
+
 		}
 	}
 	i++;
