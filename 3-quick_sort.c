@@ -30,7 +30,6 @@ void qs(int *array, int lo, int hi, int size)
 		qs(array, lo, p - 1, size);
 		qs(array, p + 1, hi, size);
 	}
-
 }
 
 /**
