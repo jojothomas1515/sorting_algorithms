@@ -63,12 +63,10 @@ int partition(int *array, int lo, int hi, size_t size)
 		{
 			i++;
 
-			if (j != i && j != hi - 1)
-			{
-				swap(&array[i], &array[j]);
+			swap(&array[i], &array[j]);
+			if (j != i)
 
 				print_array(array, size);
-			}
 
 		}
 	}
@@ -76,7 +74,8 @@ int partition(int *array, int lo, int hi, size_t size)
 
 	/* Swap the pivot element to it correct index */
 	swap(&array[i], &array[hi]);
-	print_array(array, size);
+	if (i != hi)
+		print_array(array, size);
 
 
 	/* returns the pivot index */
