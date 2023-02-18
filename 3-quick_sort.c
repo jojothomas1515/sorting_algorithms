@@ -23,16 +23,14 @@ void qs(int *array, int lo, int hi, int size)
 {
 	int p;
 
-	if (lo >= hi || lo < 0)
-		goto end_;
+	if (lo < hi && lo >= 0)
+	{
+		p = partition(array, lo, hi, size);
 
-	p = partition(array, lo, hi, size);
+		qs(array, lo, p - 1, size);
+		qs(array, p + 1, hi, size);
+	}
 
-	qs(array, lo, p - 1, size);
-	qs(array, p + 1, hi, size);
-
-		end_:
-	(void) NULL;
 }
 
 /**
