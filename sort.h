@@ -25,7 +25,6 @@ typedef struct listint_s
 void print_array(const int *array, size_t size);
 void print_list(const listint_t *list);
 
-
 /* Sorting function declarations */
 void bubble_sort(int *array, size_t size);
 void insertion_sort_list(listint_t **list);
@@ -34,9 +33,8 @@ void quick_sort(int *array, size_t size);
 
 /*My Prototypes*/
 void swap(int *a, int *b);
-void swap_dlist(listint_t *a, listint_t *b);
+listint_t *swap_dlist(listint_t *, listint_t *);
 void qs(int *array, int lo, int hi, int size);
 int partition(int *array, int lo, int hi, size_t size);
-
 
 #endif /* SORT_H */
