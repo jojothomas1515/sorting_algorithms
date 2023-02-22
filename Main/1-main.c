@@ -42,6 +42,7 @@ int main(void)
 {
 	listint_t *list;
 	int array[] = {19};
+	
 	size_t n = sizeof(array) / sizeof(array[0]);
 
 	list = create_listint(array, n);
