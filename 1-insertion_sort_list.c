@@ -6,10 +6,12 @@
  */
 void insertion_sort_list(listint_t **list)
 {
-	listint_t *node = *list;
+	listint_t *node;
 
-	if (list != NULL && *list != NULL && (*list)->next != NULL)
+
+	if (list != NULL && (*list) != NULL && (*list)->next != NULL)
 	{
+		node = *list;
 		while (node)
 		{
 			*list = swap_dlist(node, *list);
@@ -28,7 +30,7 @@ listint_t *swap_dlist(listint_t *node, listint_t *l_item)
 {
 	listint_t *temp, *cn = node;
 	int tracked = 0;
-	
+
 	while (cn)
 	{
 		if (!cn->prev)
