@@ -38,8 +38,9 @@ void counting_sort(int *array, size_t size)
 
 	for (i = 0; (size_t)i < size; i++)
 	{
-		narray[farray[array[i]] - 1] = array[i];
 		farray[array[i] - 1] -= 1;
+
+		narray[farray[array[i] - 1]] = array[i];
 	}
 
 	free(farray);
